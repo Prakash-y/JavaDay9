@@ -1,0 +1,23 @@
+package Day9;
+import java.util.Arrays;
+
+public class Tc_1_3_Third_Position 
+{
+	
+	  public static void main(String[] args) 
+	  {
+	    int[] testData = {1, 2, 10, 4, 5}; 
+	    int maxNumber = testData[2];
+	    Arrays.sort(testData);
+	    if (testData[testData.length - 1] == maxNumber) 
+	    {
+	      System.out.println(maxNumber);
+	    }
+	    else
+	    {
+	      System.out.println("Max number is not in the third position.");
+	    }
+	  }
+	}
+
+
