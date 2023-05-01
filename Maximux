@@ -1,0 +1,45 @@
+package Day9;
+
+
+	import java.util.Scanner;
+
+	public class Maximum<T extends Comparable<T>> 
+	{
+	    public T findMax(T a, T b, T c)
+	    {
+	        T max = a;
+
+	        if (b.compareTo(max) > 0) 
+	        {
+	            max = b;
+	        }
+
+	        if (c.compareTo(max) > 0)
+	        {
+	            max = c;
+	        }
+
+	        return max;
+	    }
+
+	    public static void main(String[] args) {
+	        Scanner input = new Scanner(System.in);
+	        Maximum<Float> floatMax = new Maximum<Float>();
+	        Maximum<String> stringMax = new Maximum<String>();
+
+	        System.out.println("Enter three float numbers:");
+	        float num1 = input.nextFloat();
+	        float num2 = input.nextFloat();
+	        float num3 = input.nextFloat();
+	        System.out.println("The maximum float number is " + floatMax.findMax(num1, num2, num3));
+
+	        System.out.println("Enter three strings:");
+	        input.nextLine();
+	        String str1 = input.nextLine();
+	        String str2 = input.nextLine();
+	        String str3 = input.nextLine();
+	        System.out.println("The maximum string is " + stringMax.findMax(str1, str2, str3));
+	    }
+	}
+
+
