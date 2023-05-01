@@ -1,0 +1,31 @@
+package Day9;
+
+public class Tc1_2_SecondPosition 
+{
+	
+	    public static void main(String[] args) 
+	    {
+	        int[] arr = {1, 5, 3, 7, 9}; 
+	        int max = getMaxNumberInSecondPosition(arr);
+	        System.out.println("Max number in the second position: " + max);
+	    }
+
+	    public static int getMaxNumberInSecondPosition(int[] arr) 
+	    {
+	        if (arr.length < 2) 
+	        {
+	            throw new IllegalArgumentException("Array must have at least two elements");
+	        }
+	        int max = arr[1];
+	        for (int i = 2; i < arr.length; i++) 
+	        {
+	            if (arr[i] > max) 
+	            {
+	                max = arr[i];
+	            }
+	        }
+	        return max;
+	    }
+	}
+
+
